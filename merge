@@ -1,0 +1,5 @@
+#!/bin/bash
+java Diff $1 $2 $3 > patch1
+java Diff $1 $2 $4 > patch2
+echo "Patch files created. Running merge..."
+java Diff M patch1 patch2
